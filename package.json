@@ -30,7 +30,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "prettier": "prettier ."
+    "prettier": "prettier . --write"
   },
   "browserslist": {
     "production": [
