@@ -35,10 +35,10 @@ export default [
   {
     rules: {
       "no-console": "warn",
-      "no-unused-vars": "warn",
+      "no-unused-vars": "error",
       "react/prop-types": "off",
-      "@typescript-eslint/no-unused-vars": ["warn"],
-      "unused-imports/no-unused-imports": "warn",
+      "@typescript-eslint/no-unused-vars": ["error"],
+      "unused-imports/no-unused-imports": "error",
       "react/react-in-jsx-scope": "off",
       "react/jsx-filename-extension": [
         1,
