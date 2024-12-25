@@ -1,46 +1,88 @@
-# Getting Started with Create React App
+# SBER
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Описание проекта (Когда-то оно будет)
 
-## Available Scripts
+## Подготовка к запуску проекта
 
-In the project directory, you can run:
+Для начала нужно установить [yarn](sberusersoft), [VS Code](sberusersoft) и [NodeJS](sberusersoft)
 
-### `yarn start`
+Для работы в проекте используем только yarn
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Для работы в VS Code необходимы эти расширения
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+| Расширение                | Описание                                               |
+| ------------------------- | ------------------------------------------------------ |
+| ESLint                    | Для работы Eslint и поддержания кода на высоком уровне |
+| Prettier - Code formatter | Для автоформатирования кода                            |
 
-### `yarn test`
+## Настройка VS Code
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Переходим в настройки VS Code (ctrl + shift + p)
 
-### `yarn build`
+Ищем Open user settings (JSON)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Добавляем к настройкам
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```json
+{
+  //your settings....
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "files.eol": "\n",
+  "editor.formatOnSave": true,
+  "eslint.validate": [
+    "react",
+    "html",
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact"
+  ]
+}
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Меняем Formatter
 
-### `yarn eject`
+File -> Preferences -> Settings
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+В поиске пишем formatter
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+В поле Default Formatter выбираем Prettier - Code formatter
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## ТУТ БУДЕТ ОПИСАНИЕ КАК ПОДКЛЮЧИТЬ SSH Key
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## ТУТ БУДЕТ ПРО NPMRC
 
-## Learn More
+## Запуск проекта
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Открываем проект в VS Code и выполняем команды:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Установка зависимостей в проекте
+
+```bash
+  yarn install
+```
+
+Локальный запуск проекта
+
+```bash
+  yarn start
+```
+
+## Требования проекта
+
+### Уровень покрытия тестами
+
+- Общее покрытие тестами должно быть не менее 30%
+- Большая часть бизнес логики должна быть покрыта тестами
+- Раз в спринт проводится встреча на которой планируются задачи по покрытию тестами
+
+### Git и GitFlow
+
+- main - код в эту ветку попадает только из веток release/x.x.x
+- release/x.x.x - ответвление от ветки develop, создается для релиза(ПСИ и далее), отвечается тегом с номером релиза, для более удобной навигации в ветке main
+- develop - основаная ветка, код в нее попадает только с помощью pull request, от этой ветке создаются все ветки под задачи
+- feature/"JIRA_TASK"/"Developer" - ветка под задачу, вместо feature может быть fix, но по дефолту используем feature, JIRA_TASK - номер задачи в Jira, Developer - фамалия разработчика, опционально, если один человек работает над задачей можно не ставить.
+
+### Git и Коммиты
+
+В основном структура коммита выглядит так: feature/"JIRA_TASK"/Описание (На русском)
