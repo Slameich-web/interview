@@ -4,7 +4,7 @@
 
 ## Подготовка к запуску проекта
 
-Для начала нужно установить [yarn](sberusersoft), [VS Code](sberusersoft) и [NodeJS](sberusersoft)
+Для начала нужно установить yarn, VS Code и NodeJS
 
 Для работы в проекте используем только yarn
 
