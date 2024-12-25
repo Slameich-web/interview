@@ -48,10 +48,6 @@ File -> Preferences -> Settings
 
 В поле Default Formatter выбираем Prettier - Code formatter
 
-## ТУТ БУДЕТ ОПИСАНИЕ КАК ПОДКЛЮЧИТЬ SSH Key
-
-## ТУТ БУДЕТ ПРО NPMRC
-
 ## Запуск проекта
 
 Открываем проект в VS Code и выполняем команды:
