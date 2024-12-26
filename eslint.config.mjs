@@ -44,7 +44,6 @@ export default [
   {
     rules: {
       'no-console': 'warn',
-      'no-unused-vars': 'error',
       'react/prop-types': 'off',
       '@typescript-eslint/no-unused-vars': ['error'],
       'unused-imports/no-unused-imports': 'error',
