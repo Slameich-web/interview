@@ -16,8 +16,7 @@ pre-commit:
   parallel: true
   commands:
     lint:style:
-      glob: '*.{scss}'
-      run: yarn lint:style {staged_files}
+      run: yarn lint:style
     eslint:
       glob: '*.{js,ts,jsx,tsx}'
       run: yarn eslint {staged_files}
